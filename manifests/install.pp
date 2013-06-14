@@ -1,6 +1,6 @@
 class puppetclient::install ($upstreamrepository = 'false') {
   if $upstreamrepository == 'true' {
-    if $::operatingsystem == 'Debian' {
+    if $::osfamily == 'Debian' {
       apt::source { 'puppet':
         location   => 'http://apt.puppetlabs.com/',
         release    => $::lsbdistcodename,
