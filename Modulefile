@@ -1,5 +1,5 @@
 name    'bschmidt-puppetclient'
-version '0.1.2'
+version '0.1.3'
 author  'Bernhard Schmidt'
 license 'Apache License, Version 2.0'
 summary 'Manages a Puppet client installation'
