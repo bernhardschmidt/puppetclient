@@ -37,21 +37,27 @@ class puppetclient::config (
   # https://projects.puppetlabs.com/issues/20200
 
   if ! has_key($data, 'main') {
-    $data[main] = {}
+    $data_main = {}
+  } else {
+    $data_main = $data['main']
   }
 
   if ! has_key($data, 'master') {
-    $data[master] = {}
+    $data_master = {}
+  } else {
+    $data_master = $data['master']
   }
 
   if ! has_key($data, 'agent') {
-    $data[agent] = {}
+    $data_agent = {}
+  } else  {
+    $data_agent = $data['agent']
   }
 
   $config = {
-    'main' => merge($default[main], $data[main]),
-    'master' => merge($default[master], $data[master]),
-    'agent' => merge($default[agent], $data[agent]),
+    'main' => merge($default[main], $data_main),
+    'master' => merge($default[master], $data_master),
+    'agent' => merge($default[agent], $data_agent),
   }
 
   file { $configfile:
