@@ -4,10 +4,9 @@
   "author": "Bernhard Schmidt",
   "summary": "Manages a Puppet client installation",
   "license": "Apache License, Version 2.0",
-  "source": "",
+  "source": "https://github.com/bernhardschmidt/puppetclient",
   "project_page": "https://github.com/bernhardschmidt/puppetclient",
-  "issues_url": null,
-  "description": "Manage a Puppet client.",
+  "issues_url": "https://github.com/bernhardschmidt/puppetclient/issues",
   "dependencies": [
     {"name":"puppetlabs/apt","version_requirement":">=0.0.4"},
     {"name":"puppetlabs/stdlib","version_requirement":">=4.2.0"}
