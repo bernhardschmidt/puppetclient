@@ -15,7 +15,7 @@ class puppetclient::install ($upstreamrepository = false) {
 
       Apt::Source['puppet'] -> Package['puppet']
     } else {
-      warn ("puppetclient::upstreamrepository is not implemented for ${::operatingsystem}")
+      warning ("puppetclient::upstreamrepository is not implemented for ${::operatingsystem}")
     }
   }
 
