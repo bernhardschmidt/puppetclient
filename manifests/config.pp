@@ -13,7 +13,6 @@ class puppetclient::config (
       'ssldir' => '/var/lib/puppet/ssl',
       'rundir' => '/var/run/puppet',
       'factpath' => '$vardir/lib/facter',
-      'templatedir' => '$confdir/templates',
       'usecacheonfailure' => 'false',
     },
     'agent' => {
@@ -24,8 +23,6 @@ class puppetclient::config (
     'master' => {
       'ssl_client_header' => 'SSL_CLIENT_S_DN',
       'ssl_client_verify_header' => 'SSL_CLIENT_VERIFY',
-      'modulepath' => '$confdir/environments/$environment/modules',
-      'manifest' => '$confdir/environments/$environment/manifests/site.pp',
       'certname' => $server,
       'reports' => 'tagmail,log,store',
     }

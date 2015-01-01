@@ -1,5 +1,8 @@
 2015-01-01 Bernhard Schmidt - 0.2.0
  * use deep_merge() from puppetlabs-stdlib 4.2.0
+ * drop templatedir, manifest and modulepath from default configuration
+   according to
+   https://docs.puppetlabs.com/puppet/latest/reference/environments_classic.html#config-file-environments-are-deprecated
 
 2014-01-20 Bernhard Schmidt - 0.1.4
  * puppetclient is now compatible with parser=future
