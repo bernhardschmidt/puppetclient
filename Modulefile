@@ -7,4 +7,4 @@ description 'Manage a Puppet client.'
 project_page 'https://github.com/bernhardschmidt/puppetclient'
 
 dependency 'puppetlabs/apt', '>=0.0.4'
-dependency 'puppetlabs/stdlib', '>=3.0.0'
+dependency 'puppetlabs/stdlib', '>=4.2.0'

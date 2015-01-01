@@ -31,34 +31,7 @@ class puppetclient::config (
     }
   }
 
-  # Live would be so easy if there was a deep_merge function
-  # $config = deep_merge($default, $data)
-  # Instead we have to check each section for the right type and merge them seperately
-  # https://projects.puppetlabs.com/issues/20200
-
-  if ! has_key($data, 'main') {
-    $data_main = {}
-  } else {
-    $data_main = $data['main']
-  }
-
-  if ! has_key($data, 'master') {
-    $data_master = {}
-  } else {
-    $data_master = $data['master']
-  }
-
-  if ! has_key($data, 'agent') {
-    $data_agent = {}
-  } else  {
-    $data_agent = $data['agent']
-  }
-
-  $config = {
-    'main' => merge($default[main], $data_main),
-    'master' => merge($default[master], $data_master),
-    'agent' => merge($default[agent], $data_agent),
-  }
+  $config = deep_merge($default, $data)
 
   file { $configfile:
     content => template('puppetclient/puppet.conf.erb')
