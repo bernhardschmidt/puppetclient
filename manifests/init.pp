@@ -1,5 +1,5 @@
 class puppetclient (
-    $upstreamrepository = 'false',
+    $upstreamrepository = false,
     $server = undef,
     $startmode = undef,
     $cronminutes = [fqdn_rand(29),fqdn_rand(29)+30],   # Run every 30 minutes

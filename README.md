@@ -29,7 +29,6 @@ The following class parameters are supported and can either be set from the mani
 * **cronminutes**: An array of minutes on the clock where the Puppet client will be run. Only used when startmode == cron. Defaults to a random 30 minute interval based on the client FQDN
 * **splay**: if defined and $startmode == 'cron', wait a random interval of up to $splay seconds for each run. Used to spread the load. It installs a bashscript in /usr/local/bin/waitrandom to do this.
 * **upstreamrepository**: If set to **'true'**, configure APT to use the Puppetlabs APT Repository. Should work on all Debian-based distributions, but has only been tested on Debian and Ubuntu so far. Success stories regarding other Debian-based distributions are welcome.
-    * **ATTENTION** Although this is supposed to be a boolean variable, you need to set it to **'true'** string for the moment due to [Puppet Bug #17474](http://projects.puppetlabs.com/issues/17474). This will be changed once a fixed Puppet release is available
 
 Example:
 
@@ -48,8 +47,6 @@ The same can be archieved by setting the following variables in Hiera:
      puppetclient::startmode :   'cron'
      puppetclient::cronminutes : [ '5','25','45' ]
      puppetclient::splay :       300
-
-If you want to set $upstreamrepository, you currently need to use **'true'** (the string), not **true** (Boolean value)
 
 ### puppetclient::config
 

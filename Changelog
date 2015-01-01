@@ -1,3 +1,7 @@
+2015-01-02 Bernhard Schmidt - 0.2.1
+ * use str2bool to convert upstreamrepository to a boolean variable, you
+   don't have to be careful about the correct type anymore
+
 2015-01-01 Bernhard Schmidt - 0.2.0
  * use deep_merge() from puppetlabs-stdlib 4.2.0
  * drop templatedir, manifest and modulepath from default configuration
